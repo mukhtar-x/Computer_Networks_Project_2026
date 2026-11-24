@@ -1,0 +1,1 @@
+{"name":"sw2","aging":300,"ports":{"p1":{"role":"access","vlan":20},"p2":{"role":"access","vlan":10},"p3":{"role":"access","vlan":20},"p4":{"role":"trunk","vlans":[10,20]}}}
