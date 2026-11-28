@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" font-family="Inter, Arial, sans-serif" font-size="12" text-anchor="middle">
+<rect width="720" height="240" fill="#fff"/>
+<g stroke="#8a96a3" stroke-width="1.4" fill="none">
+<path d="M110 35L200 100M110 105L200 105M110 175L200 110"/>
+<path d="M610 35L520 100M610 105L520 105M610 175L520 110"/>
+<path d="M345 190H405M485 190H540" />
+</g>
+<g stroke="#1f4e79" stroke-width="4" fill="none"><path d="M300 105H420M250 128V190H275"/></g>
+<g fill="#e8f1fb" stroke="#2a78d6">
+<rect x="20" y="18" width="90" height="34" rx="5"/><rect x="20" y="158" width="90" height="34" rx="5"/><rect x="610" y="88" width="90" height="34" rx="5"/></g>
+<g fill="#fdeee7" stroke="#eb6834" stroke-dasharray="4 2">
+<rect x="20" y="88" width="90" height="34" rx="5"/><rect x="610" y="18" width="90" height="34" rx="5"/><rect x="610" y="158" width="90" height="34" rx="5"/></g>
+<g fill="#1f4e79"><rect x="200" y="82" width="100" height="46" rx="6"/><rect x="420" y="82" width="100" height="46" rx="6"/></g>
+<g fill="#fff" stroke="#1f2933"><rect x="275" y="170" width="70" height="40" rx="18"/><rect x="415" y="170" width="70" height="40" rx="18"/><rect x="540" y="170" width="52" height="40" rx="4"/></g>
+<g fill="#1f2933">
+<text x="65" y="39">h1 · V10</text><text x="65" y="109">h2 · V20</text><text x="65" y="179">h3 · V10</text>
+<text x="655" y="39">h4 · V20</text><text x="655" y="109">h5 · V10</text><text x="655" y="179">h6 · V20</text>
+<text x="310" y="195" font-weight="600">R1</text><text x="450" y="195" font-weight="600">R2</text><text x="566" y="195" font-weight="600">S1</text>
+</g>
+<g fill="#fff" font-weight="600"><text x="250" y="102">SW1</text><text x="470" y="102">SW2</text><g font-size="10" font-weight="400"><text x="250" y="118">Python switch</text><text x="470" y="118">Python switch</text></g></g>
+<g fill="#51606e" font-size="11">
+<text x="360" y="96">802.1Q trunk</text><text x="360" y="123">p4 ↔ p4</text>
+<text x="243" y="162" text-anchor="end">p5 trunk</text><text x="158" y="56">p1</text><text x="150" y="99">p2</text><text x="158" y="160">p3</text>
+<text x="562" y="56">p1</text><text x="570" y="99">p2</text><text x="562" y="160">p3</text>
+<text x="310" y="228">.10 and .20 gateways</text><text x="415" y="162">10.0.12.0/30</text><text x="530" y="228">10.0.30.0/24</text>
+</g>
+</svg>
