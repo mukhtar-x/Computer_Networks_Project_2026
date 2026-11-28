@@ -8,9 +8,9 @@ Ownership is indicated by the filename suffix used in the project files.
 
 | Suffix | Member |
 |---|---|
-| `_h` | Abdullah |
-| `_d` | Mashhood |
-| `_r` | Mukhtar |
+| `_h` | Abdullah (24K-0532) |
+| `_d` | Mashhood Riaz (24K-0530) |
+| `_r` | Mukhtar (24K-0511) |
 
 ## Repository layout
 
@@ -23,8 +23,8 @@ Ownership is indicated by the filename suffix used in the project files.
 | `tests/` | Error-code unit tests and raw-frame diagnostic |
 | `results/` | E1–E5 CSV results and analyzer summary |
 | `captures/` | ARP, trunk, CRC-32 test-frame, and traceroute pcapng files |
-| `screenshots/` | Annotated-image location; no images are currently present |
-| `docs/` | Project proposal PDF |
+| `annotated_screenshots/` | Annotated Wireshark screenshots for ARP, CRC-32, traceroute, and trunk traffic |
+| `CS3001_Project30-Proposal_0530,0511,0532.pdf` | Project proposal with team roll numbers and responsibilities |
 | `demo_r.sh`, `requirements.sh` | Interactive demo and Ubuntu package installer |
 
 See [ARCHITECTURE.md](./ARCHITECTURE.md) for topology and addressing details, [REPORT.md](./REPORT.md) for the results, and [AI_USE_DISCLOSURE.md](./AI_USE_DISCLOSURE.md) for the AI-use and student-verification statements.
@@ -66,6 +66,18 @@ The experiment CSVs are rewritten by their runners. Run E1 through E5 before the
 
 The saved examples are `captures/arp.pcapng`, `captures/trunk.pcapng`, `captures/crc32.pcapng`, and `captures/traceroute.pcapng`. Open them in Wireshark, or inspect a capture with `tcpdump -nn -r captures/arp.pcapng`. To regenerate the set, run the capture script above.
 
+### Annotated Wireshark screenshots
+
+These annotated views correspond to the saved pcapng examples:
+
+| ARP request/reply | CRC-32 test frames |
+|---|---|
+| ![Annotated ARP request and unicast reply](annotated_screenshots/wireshark_arp.png) | ![Annotated custom CRC-32 test frames](annotated_screenshots/wireshark_crc32.png) |
+
+| Routed traceroute | VLAN trunk tag |
+|---|---|
+| ![Annotated traceroute hops](annotated_screenshots/wireshark_traceroute.png) | ![Annotated 802.1Q VLAN trunk traffic](annotated_screenshots/wireshark_trunk.png) |
+
 If `dumpcap` cannot write under `captures/`, capture with `tcpdump` instead. For example, the demo's trunk capture uses this repository-verified command form:
 
 ```sh
@@ -86,4 +98,4 @@ sudo ip netns exec sw1 tcpdump -Q out -enn -i p4 -c 1 -w /tmp/cs3001-trunk.pcap 
 
 ## Course deliverables
 
-The submitted proposal is [docs/CS3001_Project30-Proposal_0530,0511,0532.pdf](./docs/CS3001_Project30-Proposal_0530,0511,0532.pdf). The five-page report is available as [REPORT.md](./REPORT.md) and [REPORT.pdf](./REPORT.pdf). Student completion and AI-use details are recorded in [AI_USE_DISCLOSURE.md](./AI_USE_DISCLOSURE.md); unknown personal details are explicitly marked for group confirmation.
+The submitted proposal is [CS3001_Project30-Proposal_0530,0511,0532.pdf](./CS3001_Project30-Proposal_0530,0511,0532.pdf). The five-page report is available as [REPORT.md](./REPORT.md) and [REPORT.pdf](./REPORT.pdf). Proposal-based member contributions, AI use, and student verification are recorded in [AI_USE_DISCLOSURE.md](./AI_USE_DISCLOSURE.md).

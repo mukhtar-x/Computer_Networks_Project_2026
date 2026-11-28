@@ -5,7 +5,7 @@
 **Group:** 11<br>
 **Mashhood Riaz:** 24K-0530<br>
 **Abdullah:** 24K-0532<br>
-**Mukhtar:** [ROLL NO]
+**Mukhtar:** 24K-0511
 
 ## Abstract
 
@@ -99,7 +99,17 @@ Unlimited   Python       #                      6.66%
 
 ## Packet-capture evidence
 
-The saved evidence files are [captures/arp.pcapng](./captures/arp.pcapng), [captures/trunk.pcapng](./captures/trunk.pcapng), [captures/crc32.pcapng](./captures/crc32.pcapng), and [captures/traceroute.pcapng](./captures/traceroute.pcapng). They cover ARP, tagged trunk traffic, custom CRC-32 test frames, and ICMP traffic associated with traceroute. The `screenshots/` directory contains no annotated images, so none are embedded in this report.
+The saved evidence files are [captures/arp.pcapng](./captures/arp.pcapng), [captures/trunk.pcapng](./captures/trunk.pcapng), [captures/crc32.pcapng](./captures/crc32.pcapng), and [captures/traceroute.pcapng](./captures/traceroute.pcapng). The annotated Wireshark views below show ARP, tagged trunk traffic, custom CRC-32 test frames, and traceroute-related ICMP.
+
+| ARP request/reply | CRC-32 test frames |
+|---|---|
+| ![Annotated ARP request and reply](annotated_screenshots/wireshark_arp.png) | ![Annotated CRC-32 frame details](annotated_screenshots/wireshark_crc32.png) |
+| *ARP request is broadcast; reply is unicast.* | *Custom test frame includes payload and error-detection trailer.* |
+
+| Routed traceroute | VLAN trunk tag |
+|---|---|
+| ![Annotated traceroute hops](annotated_screenshots/wireshark_traceroute.png) | ![Annotated VLAN trunk packet](annotated_screenshots/wireshark_trunk.png) |
+| *Three routed hops are visible in the capture.* | *The 802.1Q header carries VLAN ID 10.* |
 
 ## Discussion
 
@@ -107,7 +117,7 @@ E1's flooded-frame ratio has a floor because ARP requests are always broadcast. 
 
 ## Limitations
 
-The experiments use Linux virtual Ethernet links and namespace-local measurements, not physical switch hardware. Results depend on the host and the saved CSVs represent only three runs per condition. E1's one-second sampling and E2's approximate bridge CPU measure constrain interpretation. The E4 burst results characterize the implemented random corruption model, not every possible real-world link error. No annotated screenshots were available at report creation.
+The experiments use Linux virtual Ethernet links and namespace-local measurements, not physical switch hardware. Results depend on the host and the saved CSVs represent only three runs per condition. E1's one-second sampling and E2's approximate bridge CPU measure constrain interpretation. The E4 burst results characterize the implemented random corruption model, not every possible real-world link error. The annotated screenshots are representative views; the pcapng files remain the underlying packet evidence.
 
 ## Conclusion
 
@@ -115,4 +125,4 @@ The lab demonstrates VLAN-scoped switching, 802.1Q trunks, router-on-a-stick for
 
 ## AI-use summary
 
-Claude (chat) and an IDE coding assistant supported planning, code generation, debugging, and documentation. Students ran the experiments on their own Linux machine and supplied the resulting CSVs and captures. See [AI_USE_DISCLOSURE.md](./AI_USE_DISCLOSURE.md) for the areas assisted, reported issues, and member verification placeholders.
+Claude and an IDE coding assistant were used mainly for learning, planning, and coding assistance, as well as documentation and video-generation assistance. Each member implemented and tested their assigned work and ran through the related experiment steps described in the proposal; the students ran the experiments on their own Linux machine. See [AI_USE_DISCLOSURE.md](./AI_USE_DISCLOSURE.md) for proposal-based individual responsibilities and further details.
